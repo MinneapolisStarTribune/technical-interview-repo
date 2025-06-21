@@ -7,7 +7,6 @@
     "baseUrl": ".",
     "paths": {
       "@web/*": ["apps/web/*"],
-      "@api/*": ["apps/api/*"]
     }
   }
 }
