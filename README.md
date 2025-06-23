@@ -1,13 +1,15 @@
 # The Minnesota Star Tribune Technical Assessment
 
-This is a full stack repository using:
+### Table of Contents
 
-- **Frontend**: [Next.js](https://nextjs.org/) (App Router) + [Tailwind CSS](https://tailwindcss.com/) + TypeScript 
-- **Backend** [Nest.js](https://nestjs.com/) + [GraphQL](https://graphql.org/) + TypeScript
+- [Create Your Own Copy of this Repository](#create-your-own-copy)
+- [Check Out the Correct Assessment Branch](#check-out-the-correct-assessment-branch)
+- [Instructions](#instructions)
+- [Submitting Your Work](#submitting-your-work)
+- [Assessment Ticket](#assessment-ticket)
+- [🛠 Development & Run Commands](./dev.md)
 
 ---
-
-## 🛠 Getting Started
 
 ### Create Your Own Copy
 
@@ -20,11 +22,6 @@ git clone git@github.com:your-username/your-repo-name.git
 cd your-repo-name
 ```
 
-### Install Dependencies
-```bash
-yarn install
-````
-
 ### Check Out the Correct Assessment Branch
 You’ll complete your work on a specific branch depending on your role and assessment type.
 
@@ -36,17 +33,30 @@ Fetch all branches and switch to the correct one:
 git checkout mid-level-assessment/frontend  # Replace with the branch specified in your email
 ```
 
-## Controls
-### Start the Frontend (Next.js)
-```bash
-yarn dev:web
-```
-Runs the Next.js app in development mode
+### Instructions
+In the branch provided by the hiring manager, you’ll find a sample ticket similar to what you might receive at The Minnesota Star Tribune. You will find the full ticket [at the bottom of this README](#assessment-ticket).
 
-Available at http://localhost:3000
+Your task is to read through it, understand the intent, and implement a solution. This is your opportunity to show us how you approach a problem, organize your code, and communicate trade-offs or ideas. If you see opportunities to improve the existing code, feel free to go for it — or leave a comment noting what you'd change and why.
 
-### Run Tests
-```bash
-yarn test
-```
-You can also run tests in individual apps by running `yarn workspace web test` or `yarn workspace api test`
+⏱️ **Time Expectations**  
+Please aim to spend around **1 hour** or less on this. No more than **2 hours max** — we want to respect your time.
+
+💬 **Stuck or Blocked?**  
+It happens!
+
+If you run into any snags — whether it’s the repo not setting up, you’re confused about the project structure, or something just isn’t clicking — please reach out to the hiring manager. Asking for help is a skill we value deeply here, and we see debugging and pair-programming as collaborative, not corrective.
+
+If you need a hand, we’ll hop on a quick call and work through it together. This isn’t a test of perfection — it’s a chance to get a feel for how we solve problems together.
+
+### Submitting Your Work
+When you’re done:
+
+- Push your changes to your GitHub repo.
+- Create a Pull Request in your repo (draft is fine).
+- During the technical portion of your final interview, you’ll walk through your solution with a team member and discuss your approach, trade-offs, and ideas.
+
+--- 
+
+### Assessment Ticket
+
+In the branch provided by the hiring manager, you will find the ticket details here.
