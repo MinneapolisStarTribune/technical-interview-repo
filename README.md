@@ -1,4 +1,5 @@
-# The Minnesota Star Tribune Technical Assessment
+# The Minnesota Star Tribune Technical Assessment 
+### Mid-Level Engineer - Frontend
 
 ### Table of Contents
 
@@ -59,5 +60,30 @@ When you’re done:
 --- 
 
 ### Assessment Ticket
+✨ Feature: Author Profile Pages
 
-In the branch provided by the hiring manager, you will find the ticket details here.
+**Problem Statement**
+Right now, our app shows a list of articles, but there's no way to explore more about the authors behind the work. Readers can see a byline, but they can’t learn who the author is or what else they’ve written.
+
+**Proposed Solution**
+We recently introduced a dedicated dataset of authors (`apps/web/src/hardcoded-data/authors.tsx`). Let’s use this to power a brand new author profile page. Clicking an author’s name will take the user to `/author/author-name`, where they can learn more about that journalist.
+
+**Business Value**
+Author pages help personalize the reading experience and strengthen trust. They create a clearer sense of voice and expertise while also encouraging deeper engagement with related content. This improves reader retention and lays the groundwork for future features like "follow this author" or "trending journalists."
+
+**Business Requirements**
+ - All author names should be clickable.
+ - Clicking on a name should navigate to `/author/author-name`.
+    - The author page must include:
+        - Author’s full name
+        - Their bio
+        - A headshot image
+
+**Design Comps**
+![Photo of an author's page on Star Tribune](./design-comp.png)
+
+It’s expected that your implementation will not match the design exactly.
+
+### ❓ Open Question
+We’d **LOVE** to include previews of that author’s articles on their profile page. Is that something you think is feasible given how the data is currently set up?
+It's alright if it’s out of scope — but if it’s a relatively straightforward addition, we’d love to see it explored!
