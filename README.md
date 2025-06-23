@@ -53,7 +53,8 @@ When you’re done:
 
 - Push your changes to your GitHub repo.
 - Create a Pull Request in your repo (draft is fine).
-- During the technical portion of your final interview, you’ll walk through your solution with a team member and discuss your approach, trade-offs, and ideas.
+- Email the link to the pull request to the Hiring Manager.
+- During the technical portion of your final interview, you’ll walk through your solution with a team member and discuss your approach, trade-offs, and ideas for future improvement(s).
 
 --- 
 

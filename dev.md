@@ -34,8 +34,9 @@ Once running, the GraphQL playground will be available at http://localhost:4000/
 
 ## Project Structure
 apps/
-  web/         # Frontend — Next.js
-  api/         # Backend — Nest.js
+  web/                  # Frontend — Next.js
+    northern-star/      # Our Frontend Design System
+  api/                  # Backend — Nest.js
   ...
 
 ## Troubleshooting Tips
