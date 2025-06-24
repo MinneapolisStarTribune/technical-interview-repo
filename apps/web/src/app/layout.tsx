@@ -17,10 +17,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <NavBar />
       <body
         className={`antialiased`}
       >
+        <NavBar />
         {children}
       </body>
     </html>
