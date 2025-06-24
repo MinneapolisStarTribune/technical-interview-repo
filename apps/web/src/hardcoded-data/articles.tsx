@@ -17,7 +17,7 @@ export const articles: Article[] = [
     date: "2025-06-20",
     summary:
       "Developers around the world are falling in love with utility-first CSS and the speed it enables.",
-    image: "https://source.unsplash.com/random/800x600/?person",
+    image: "https://picsum.photos/600/400",
     content: `Tailwind CSS has transformed front-end development with its utility-first approach. Developers find it allows them to build responsive, clean layouts faster without fighting CSS specificity.
 
 Beyond speed, Tailwind offers remarkable flexibility and consistency, letting teams enforce design systems with ease. This is particularly helpful in projects where design changes rapidly.
@@ -47,6 +47,7 @@ Analysts predict that GraphQL will become the de facto standard for modern API d
     date: "2025-06-19",
     summary:
       "The summer market attracted unprecedented crowds, benefiting local vendors.",
+    image: "https://picsum.photos/600/400",
     content: `The downtown farmers' market experienced record turnout this summer, with thousands flocking every weekend. Vendors reported selling out of produce early, a testament to growing community support.
 
 Organizers attribute this success to increased marketing efforts and the rising trend of supporting local agriculture. The market offers a wide variety of organic fruits, vegetables, and artisanal products.
@@ -105,6 +106,7 @@ The win secures the team an invitation to international competitions next year, 
     date: "2025-06-10",
     summary:
       "Mild weather allowed local hiking trails to open weeks ahead of schedule.",
+    image: "https://picsum.photos/600/400",
     content: `Thanks to an unseasonably warm spring, many area hiking trails have opened earlier than usual. Park rangers urge hikers to remain cautious and adhere to posted guidelines.
 
 The early opening offers outdoor enthusiasts extra weekends to explore nature before the summer heat.
@@ -148,6 +150,7 @@ Parents and educators alike applaud the challenge for its positive impact on you
     date: "2025-06-07",
     summary:
       "GreenTech Innovations secures Series A funding to accelerate renewable energy solutions.",
+    image: "https://picsum.photos/600/400",
     content: `GreenTech Innovations announced a $10 million Series A funding round to advance its renewable energy technologies. The company’s flagship product focuses on affordable solar solutions for residential use.
 
 The investment will fuel research, product development, and market expansion.
@@ -177,6 +180,7 @@ Live music, food vendors, and workshops added to the lively atmosphere throughou
     date: "2025-06-05",
     summary:
       "Logistics and safety plans are underway for the annual city marathon.",
+    image: "https://picsum.photos/600/400",
     content: `Runners from across the nation are registering for the city’s annual marathon scheduled for next month.
 
 Organizers have planned road closures, volunteer support, and safety measures to ensure a smooth event.
@@ -720,6 +724,7 @@ Soil testing can guide nutrient supplementation for optimal growth.`,
     date: "2025-04-28",
     summary:
       "Programs focus on tutoring, arts, and sports for youth.",
+    image: "https://picsum.photos/600/400",
     content: `The recently opened community center provides after-school activities designed to support academic and social development.
 
 Tutoring services, art classes, and sports leagues are available.

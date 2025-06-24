@@ -1,7 +1,6 @@
 "use client"
 import { useParams } from "next/navigation";
-import Link from "next/link";
-import ArticlePreview from "../../northern-star/ArticlePreview/ArticlePreview";
+import ArticleList from "../../northern-star/ArticleList/ArticleList";
 import { articles } from "../../hardcoded-data/articles";
 
 const validCategories = [
@@ -49,21 +48,14 @@ export default function CategoryPage() {
   );
 
   return (
-    <>
-      <main className="min-h-screen bg-gray-50 py-10 px-4">
-        <div className="max-w-5xl mx-auto">
-          <h1 className="text-3xl font-bold mb-6 text-emerald-600">{category}</h1>
-          {filteredArticles.length > 0 ? (
-            <div className="grid gap-6 md:grid-cols-2">
-              {filteredArticles.map((article) => (
-                <ArticlePreview article={article} key={article.slug} />
-              ))}
-            </div>
-          ) : (
-            <p className="text-gray-700">No articles found in this category.</p>
-          )}
-        </div>
-      </main>
-    </>
+    <main className="min-h-screen bg-gray-50 py-10 px-4">
+      <div className="max-w-5xl mx-auto">
+        {filteredArticles.length > 0 ? (
+          <ArticleList articles={filteredArticles} title={category} />
+        ) : (
+          <p className="text-gray-700">No articles found in this category.</p>
+        )}
+      </div>
+    </main>
   );
 }
