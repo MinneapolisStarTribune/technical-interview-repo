@@ -7,6 +7,7 @@ export interface Article {
   image?: string;
   content: string;
   type: string[];
+  isBreaking?: boolean;
 }
 
 export const articles: Article[] = [
