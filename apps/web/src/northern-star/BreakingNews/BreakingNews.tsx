@@ -1,6 +1,6 @@
 export default function BreakingNews({ article }: any) {
   return (
-    <section className="p-6 mb-10 rounded-lg shadow-lg">
+    <section className="p-6 mb-10 rounded-lg shadow-lg" style={{ borderWidth: '4px', borderColor: '#dc2626', borderStyle: 'solid' }}>
       <div className="relative">
         <span className="absolute top-3 left-3 bg-red-600 text-white font-bold text-xs uppercase tracking-widest px-3 py-1 rounded">
           Breaking News
