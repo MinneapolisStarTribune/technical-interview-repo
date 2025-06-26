@@ -6,11 +6,17 @@ interface Props {
   params: { slug: string };
 }
 
-export default async function AuthorPage({ params }: Props) {
-  const author = authors.find((a) => a.slug === params.slug);
+export function getAuthorBySlug(slug: string) {
+  const author = authors.find((a) => a.slug === slug);
+  return author || null;
+}
+
+export default function AuthorPage({ params }: Props) {
+  const author = getAuthorBySlug(params.slug);
 
   if (!author) {
     notFound();
+    return;
   }
 
   return <AuthorClient author={author} />;
