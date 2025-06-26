@@ -33,11 +33,10 @@ Once running, the GraphQL playground will be available at http://localhost:4000/
 - To run tests across the backend `yarn workspace api test`
 
 ## Project Structure
-apps/
-  web/                  # Frontend — Next.js
-    northern-star/      # Our Frontend Design System
-  api/                  # Backend — Nest.js
-  ...
+- apps/
+  - web/                  # Frontend — Next.js
+    - northern-star/      # Our Frontend Design System
+  - api/                  # Backend — Nest.js
 
 ## Troubleshooting Tips
 If you encounter module resolution issues or things seem broken, try reinstalling dependencies:

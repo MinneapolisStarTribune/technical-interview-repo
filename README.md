@@ -1,4 +1,5 @@
-# The Minnesota Star Tribune Technical Assessment
+# The Minnesota Star Tribune Technical Assessment 
+### Mid-Level Engineer - Frontend
 
 ### Table of Contents
 
@@ -59,5 +60,38 @@ When you’re done:
 --- 
 
 ### Assessment Ticket
+✨ Feature: Following Your Favorite Author(s)
 
-In the branch provided by the hiring manager, you will find the ticket details here.
+**Problem Statement**
+Readers can see an author’s byline on each article, but there’s no way to "follow" authors they like. We want to make the experience more personalized by allowing users to follow specific journalists and reflect that preference across the app.
+
+**Proposed Solution**
+Let’s introduce a lightweight "Follow Author" feature. You’ll wire up a way for users to follow and unfollow those authors across the app.
+
+**Business Value**
+Following authors helps build loyalty and engagement. Readers begin to recognize trusted voices and are more likely to read more from people they follow.
+
+**Business Requirements**
+- A user should be able to follow or unfollow an author.
+    - This can be a checkbox, toggle, button — your call!
+    - You only need to implement this on the AuthorPage.
+- If an author is being followed, display a little "Following" pill
+    - On the ArticlePreview card
+    - On the main ArticlePage.
+- Re-order articles on the homepage so that followed author's articles appear first in each section.
+
+**Technical Requirements**
+- You must use React Context + Provider to manage the follow state globally. 
+- This state should be accessible across pages and components.
+- Persist the follow state to localStorage so it survives refreshes.
+
+**Design Notes**  
+You don’t need to match any specific designs here. A simple pill or "badge" that says “Following” is more than enough.
+
+**Bonus Points**  
+The above requirements cover everything we need to assess your technical skills — but if you're someone who enjoys going the extra mile, here's how you can show it:
+- Add a new route at /author/favorites
+- On this page, display followed authors and their articles
+    - Group the articles by author
+    - Use the author’s name as a subheading, followed by a list of their articles
+This is strictly **optional** — it's simply here to give you a clear direction if you'd like to keep building. No pressure, and it won't count against you if you skip it!
