@@ -28,10 +28,20 @@ You’ll complete your work on a specific branch depending on your role and asse
 
 📬 Check your invitation email for the name of the branch you should use — for example, `mid-level-assessment/frontend`.
 
-Fetch all branches and switch to the correct one:
+Add the template repo as a remote and fetch the branch:
 
 ```
-git checkout mid-level-assessment/frontend  # Replace with the branch specified in your email
+# Add the original template repo as an upstream remote
+git remote add upstream git@github.com:MinneapolisStarTribune/technical-interview-repo.git
+
+# Fetch all branches from upstream
+git fetch upstream
+
+# Check out the correct starter branch
+git checkout -b mid-level-assessment/frontend upstream/mid-level-assessment/frontend
+
+# ✅ Create your own feature branch to do your work
+git checkout -b my-solution-branch #or whatever you decide to call this branch
 ```
 
 ### Instructions
@@ -54,6 +64,8 @@ When you’re done:
 
 - Push your changes to your GitHub repo.
 - Create a Pull Request in your repo (draft is fine).
+    - Base branch `mid-level-assessment/frontend`
+    - Compare branch `my-solution-branch #or whatever you decide to call this branch`
 - Email the link to the pull request to the Hiring Manager.
 - During the technical portion of your final interview, you’ll walk through your solution with a team member and discuss your approach, trade-offs, and ideas for future improvement(s).
 
