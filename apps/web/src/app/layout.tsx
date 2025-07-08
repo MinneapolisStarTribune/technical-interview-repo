@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import NavBar from "../northern-star/NavBar/NavBar"
 import "./globals.css";
+import { AuthorsProvider } from "./contexts/authorsProvider"
 
 export const metadata: Metadata = {
   title: "Northern Star",
@@ -16,13 +17,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`antialiased`}
-      >
-        <NavBar />
-        {children}
-      </body>
-    </html>
+    <AuthorsProvider>
+      <html lang="en">
+        <body
+          className={`antialiased`}
+        >
+          <NavBar />
+          {children}
+        </body>
+      </html>
+    </AuthorsProvider>
   );
 }
