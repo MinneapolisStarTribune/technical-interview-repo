@@ -1,6 +1,8 @@
 "use client";
 
-import Link from "next/link"
+import Link from "next/link";
+import { useContext } from "react";
+import { FollowedAuthorsContext } from "../../contexts/authorsProvider";
 import { authors } from "../../../hardcoded-data/authors";
 interface Article {
   slug: string;
@@ -16,21 +18,43 @@ interface ArticleClientProps {
 }
 
 export default function ArticleClient({ article }: ArticleClientProps) {
+  const ctx = useContext(FollowedAuthorsContext);
+
+  if (!ctx) throw new Error("FollowedAuthorsContext not found");
+
+  const { followedAuthors } = ctx;
+
+  const isFollowing = followedAuthors.some((id) => {
+    if (id === article.slug) {
+      return true;
+    }
+    return false;
+  });
+
   const author = authors.find((author) => author.name === article.author);
 
   return (
     <main className="max-w-4xl mx-auto p-6">
-      <h1 className="text-4xl font-bold mb-4 text-primary-emerald-green">{article.title}</h1>
-      <p className="text-sm text-gray-500 mb-6">
-        By{" "}       
-          <Link
-            href={author ? `/author/${author.slug}` : "#"}
-            className="hover:underline"
-          >
-            {article.author}
-          </Link>
-        {" "}· {article.date}
+      <h1 className="text-4xl font-bold mb-4 text-primary-emerald-green">
+        {article.title}
+      </h1>
+      <p className="text-sm text-gray-500 mb-2">
+        By{" "}
+        <Link
+          href={author ? `/author/${author.slug}` : "#"}
+          className="hover:underline"
+        >
+          {article.author}
+        </Link>{" "}
+        · {article.date}
       </p>
+
+      {isFollowing && (
+        <span className="inline-block mb-4 px-3 py-1 text-xs bg-green-600 text-white rounded-full">
+          Following
+        </span>
+      )}
+
       {article.image && (
         <img
           src={article.image}
