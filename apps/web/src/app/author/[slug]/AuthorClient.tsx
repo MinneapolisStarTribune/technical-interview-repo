@@ -23,7 +23,7 @@ export default function AuthorClient({ author }: AuthorClientProps) {
 
   const { followedAuthors, followAuthor, unfollowAuthor } = ctx;
 
-  const isFollowing = followedAuthors.some((id) => {
+  const isFollowing = followedAuthors?.some((id) => {
     if (id === author.slug) {
       return true;
     }

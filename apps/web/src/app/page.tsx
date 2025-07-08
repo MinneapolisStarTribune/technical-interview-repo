@@ -30,7 +30,7 @@ export default function HomePage() {
       const notFollowed = [];
 
       for (const article of original) {
-        if (followedAuthors.includes(article.author)) {
+        if (followedAuthors?.includes(article.author)) {
           followed.push(article);
         } else {
           notFollowed.push(article);
