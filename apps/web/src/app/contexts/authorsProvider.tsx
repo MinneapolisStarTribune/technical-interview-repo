@@ -32,6 +32,7 @@ export const AuthorsProvider: React.FC<{ children: React.ReactNode }> = ({ child
     setFollowedAuthors(followedAuthors.filter((id) => id !== authorId));
   };
 
+  console.log(followedAuthors);
   return (
     <FollowedAuthorsContext.Provider
       value={{ followedAuthors, followAuthor, unfollowAuthor }}
