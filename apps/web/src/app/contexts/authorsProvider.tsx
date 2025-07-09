@@ -10,17 +10,18 @@ export interface FollowedAuthorsContextType {
 
 export const FollowedAuthorsContext = createContext<FollowedAuthorsContextType | undefined>(undefined);
 
-const getInitialState = () => {
-  const currentAuthors = window.localStorage.getItem("currentAuthors");
-  return currentAuthors ? JSON.parse(currentAuthors) : null;
-};
 export const AuthorsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [followedAuthors, setFollowedAuthors] = useState<string[]>(
-      getInitialState()
-    );
+  const [followedAuthors, setFollowedAuthors] = useState<string[]>([]);
 
   useEffect(() => {
-    localStorage.setItem("followedAuthors", JSON.stringify(followedAuthors));
+    const currentAuthors = window.localStorage.getItem("currentAuthors");
+    if (currentAuthors) {
+      setFollowedAuthors(JSON.parse(currentAuthors));
+    }
+  }, []);
+
+  useEffect(() => {
+    window.localStorage.setItem("currentAuthors", JSON.stringify(followedAuthors));
   }, []);
 
   const followAuthor = (authorId: any) => {

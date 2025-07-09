@@ -24,14 +24,14 @@ export default function ArticleClient({ article }: ArticleClientProps) {
 
   const { followedAuthors } = ctx;
 
-  const isFollowing = followedAuthors.some((id) => {
-    if (id === article.slug) {
+  const author = authors.find((author) => author.name === article.author);
+
+    const isFollowing = followedAuthors.some((id) => {
+    if (id === author?.slug) {
       return true;
     }
     return false;
   });
-
-  const author = authors.find((author) => author.name === article.author);
 
   return (
     <main className="max-w-4xl mx-auto p-6">

@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useContext } from 'react';
 import { FollowedAuthorsContext } from '../../app/contexts/authorsProvider'
+import { authors } from "../../hardcoded-data/authors";
 
 export type Article = {
   title: string;
@@ -20,12 +21,14 @@ export default function ArticlePreview({ article }: { article: Article }) {
 
   const { followedAuthors } = ctx;
 
+  const author = authors.find((author) => author.name === article.author);
   const isFollowing = followedAuthors.some((id) => {
-    if (id === article.slug) {
+    if (id === author?.slug) {
       return true;
     }
-    return false;
+      return false;
   });
+
 
   return (
     <Link

@@ -23,12 +23,12 @@ export default function AuthorClient({ author }: AuthorClientProps) {
 
   const { followedAuthors, followAuthor, unfollowAuthor } = ctx;
 
-  const isFollowing = followedAuthors?.some((id) => {
-    if (id === author.slug) {
-      return true;
-    }
-    return false;
-  });
+    const isFollowing = followedAuthors.some((id) => {
+        if (id === author?.slug) {
+        return true;
+        }
+        return false;
+    });
 
   return (
     <main className="max-w-4xl mx-auto p-6">
